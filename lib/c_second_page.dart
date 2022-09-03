@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class SecondPage extends StatelessWidget {
-  final String title;
+  const SecondPage({Key? key, required this.title}) : super(key: key);
 
-  const SecondPage({required this.title});
+  final String title;
 
   @override
   Widget build(BuildContext context) {
