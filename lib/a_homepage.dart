@@ -25,10 +25,10 @@ class _MyHomePageState extends State<MyHomePage> {
   initializeQuickActions() {
     quickActions.initialize((String shortcutType) {
       switch (shortcutType) {
-        case 'First page':
+        case 'First Page':
           _navigate(FirstPage(title: shortcutType));
           return;
-        case 'Second page':
+        case 'Second Page':
           _navigate(SecondPage(title: shortcutType));
           return;
         default:
