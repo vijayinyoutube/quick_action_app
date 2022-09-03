@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'Routes/generated_routes.dart';
 import 'a_homepage.dart';
 
 void main() {
@@ -16,7 +17,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Quick Actions'),
+      initialRoute: '/',
+      onGenerateRoute: RouteGenerator().generateRoute,
     );
   }
 }
