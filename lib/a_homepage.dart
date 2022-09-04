@@ -55,14 +55,19 @@ class _MyHomePageState extends State<MyHomePage> {
 
   _navigate(String screen) {
     print(screen);
-    if (screen == quickActionScreen) {
+    // if (screen == quickActionScreen) {
+    //   Navigator.pushNamed(context, screen);
+    //   Navigator.pop(context);
+    // } else {
+    //   Navigator.of(context)
+    //       .pushNamedAndRemoveUntil('/', (Route<dynamic> route) => false);
+    //   Navigator.pushNamed(context, screen);
+    //   // setState(() => quickActionScreen = '');
+    // }
+    // setState(() => quickActionScreen = screen);
+     Navigator.of(context)
+          .pushNamedAndRemoveUntil('/', (Route<dynamic> route) => false);
       Navigator.pushNamed(context, screen);
-      Navigator.pop(context);
-    } else {
-      Navigator.pushNamed(context, screen)
-          .then((value) => setState(() => quickActionScreen = ''));
-    }
-    setState(() => quickActionScreen = screen);
   }
 
   @override
@@ -77,13 +82,10 @@ class _MyHomePageState extends State<MyHomePage> {
         children: [
           ElevatedButton(
               child: const Text('First page'),
-              onPressed: () {
-                Navigator.pushNamed(context, '/firstpage');
-              }),
+              onPressed: () => Navigator.pushNamed(context, '/firstpage')),
           ElevatedButton(
-            child: const Text('Second page'),
-            onPressed: () => Navigator.pushNamed(context, '/secondpage'),
-          ),
+              child: const Text('Second page'),
+              onPressed: () => Navigator.pushNamed(context, '/secondpage')),
         ],
       )),
     );
