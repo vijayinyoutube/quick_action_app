@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quick_actions/quick_actions.dart';
 
-import 'Routes/generated_routes.dart';
-import 'b_first_page.dart';
-import 'c_second_page.dart';
-
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
 
@@ -54,20 +50,9 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   _navigate(String screen) {
-    print(screen);
-    // if (screen == quickActionScreen) {
-    //   Navigator.pushNamed(context, screen);
-    //   Navigator.pop(context);
-    // } else {
-    //   Navigator.of(context)
-    //       .pushNamedAndRemoveUntil('/', (Route<dynamic> route) => false);
-    //   Navigator.pushNamed(context, screen);
-    //   // setState(() => quickActionScreen = '');
-    // }
-    // setState(() => quickActionScreen = screen);
-     Navigator.of(context)
-          .pushNamedAndRemoveUntil('/', (Route<dynamic> route) => false);
-      Navigator.pushNamed(context, screen);
+    Navigator.of(context)
+        .pushNamedAndRemoveUntil('/', (Route<dynamic> route) => false);
+    Navigator.pushNamed(context, screen);
   }
 
   @override
