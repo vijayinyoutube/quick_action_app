@@ -12,7 +12,6 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   QuickActions quickActions = const QuickActions();
-  String quickActionScreen = '';
 
   @override
   void initState() {
